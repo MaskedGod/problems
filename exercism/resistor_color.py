@@ -67,7 +67,9 @@ def label(colors):
     ]
     multiplier = clrs.index(colors[2])
     decoded = int(
-        str(clrs.index(colors[0])) + str(clrs.index(colors[1])) + ("0" * multiplier)
+        str(clrs.index(colors[0]))
+        + str(clrs.index(colors[1]))
+        + ("0" * multiplier)
     )
     if multiplier == 9:
         decoded = str(decoded // 10**9) + " gigaohms"
@@ -151,7 +153,16 @@ def resistor_label(colors):
         "grey",
         "white",
     ]
-    tlrnc_colors = ["grey", "violet", "blue", "green", "brown", "red", "gold", "silver"]
+    tlrnc_colors = [
+        "grey",
+        "violet",
+        "blue",
+        "green",
+        "brown",
+        "red",
+        "gold",
+        "silver",
+    ]
     tlrnc_percentage = [
         "±0.05%",
         "±0.1%",
@@ -166,7 +177,9 @@ def resistor_label(colors):
     boundary = 3 if len(colors) == 5 else 2
     tolerance = tlrnc_percentage[tlrnc_colors.index(colors[-1])]
     multiplier = 10 ** clrs.index(colors[-2])
-    decoded = int("".join([str(clrs.index(color)) for color in colors[:boundary]]))
+    decoded = int(
+        "".join([str(clrs.index(color)) for color in colors[:boundary]])
+    )
     resistance_value = decoded * multiplier
 
     if resistance_value >= 10**9:
@@ -181,8 +194,12 @@ def resistor_label(colors):
     return result
 
 
-print(resistor_label(["orange", "orange", "black", "green"]))  # "33 ohms ±0.5%"
-print(resistor_label(["orange", "orange", "orange", "grey"]))  # "33 kiloohms ±0.05%"
+print(
+    resistor_label(["orange", "orange", "black", "green"])
+)  # "33 ohms ±0.5%"
+print(
+    resistor_label(["orange", "orange", "orange", "grey"])
+)  # "33 kiloohms ±0.05%"
 print(resistor_label(["orange", "orange", "blue", "red"]))  # "33 megaohms ±2%"
 print(
     resistor_label(["orange", "orange", "orange", "black", "green"])
@@ -191,7 +208,9 @@ print(
     resistor_label(["orange", "red", "orange", "blue", "violet"])
 )  # "323 megaohms ±0.1%"
 
-print(resistor_label(["orange", "orange", "yellow", "black", "brown"]))  # 334 ohms ±1%
+print(
+    resistor_label(["orange", "orange", "yellow", "black", "brown"])
+)  # 334 ohms ±1%
 print(resistor_label(["blue", "grey", "brown", "violet"]))  # "680 ohms ±0.1%"
 print(
     resistor_label(["blue", "grey", "white", "brown", "brown"])
@@ -200,8 +219,12 @@ print(
     resistor_label(["red", "green", "yellow", "yellow", "brown"])
 )  # , "2.54 megaohms ±1%"
 print(resistor_label(["red", "black", "red", "green"]))  # "2 kiloohms ±0.5%"
-print(resistor_label(["green", "brown", "orange", "grey"]))  # "51 kiloohms ±0.05%"
-print(resistor_label(["violet", "orange", "red", "grey"]))  # "7.3 kiloohms ±0.05%"
+print(
+    resistor_label(["green", "brown", "orange", "grey"])
+)  # "51 kiloohms ±0.05%"
+print(
+    resistor_label(["violet", "orange", "red", "grey"])
+)  # "7.3 kiloohms ±0.05%"
 print(
     resistor_label(["brown", "red", "orange", "green", "blue"])
 )  # "12.3 megaohms ±0.25%"

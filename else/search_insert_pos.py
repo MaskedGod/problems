@@ -16,7 +16,7 @@ def searchInsert(nums: list[int], target: int) -> int:
             right = guess - 1
         elif nums[guess] == target:
             return guess
-        
+
     # If the target is not found, return the index where it would be inserted
     return left
 

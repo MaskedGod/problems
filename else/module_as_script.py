@@ -1,5 +1,6 @@
 import sys
 
+
 def pr(s):
     print(s)
 

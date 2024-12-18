@@ -23,7 +23,12 @@ def answer(question: str) -> int:
     if not question.startswith("What is") and question.endswith("?"):
         raise ValueError("syntax error")
 
-    parsed = question.replace("What is", "").replace("by ", "").replace("?", "").split()
+    parsed = (
+        question.replace("What is", "")
+        .replace("by ", "")
+        .replace("?", "")
+        .split()
+    )
     known_operator = any(char in ops.keys() for char in parsed)
     operators = [char for char in parsed if char in ops]
     numbers = [int(char) for char in parsed if char.lstrip("-").isdigit()]

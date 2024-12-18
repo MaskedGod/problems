@@ -4,11 +4,15 @@ class SpaceAge:
         self.earth_year_in_sec = 31_557_600
 
     def on_mercury(self):
-        self.age = round(self.seconds / (self.earth_year_in_sec * 0.2408467), 2)
+        self.age = round(
+            self.seconds / (self.earth_year_in_sec * 0.2408467), 2
+        )
         return self.age
 
     def on_venus(self):
-        self.age = round(self.seconds / (self.earth_year_in_sec * 0.61519726), 2)
+        self.age = round(
+            self.seconds / (self.earth_year_in_sec * 0.61519726), 2
+        )
         return self.age
 
     def on_earth(self):
@@ -16,23 +20,33 @@ class SpaceAge:
         return self.age
 
     def on_mars(self):
-        self.age = round(self.seconds / (self.earth_year_in_sec * 1.8808158), 2)
+        self.age = round(
+            self.seconds / (self.earth_year_in_sec * 1.8808158), 2
+        )
         return self.age
 
     def on_jupiter(self):
-        self.age = round(self.seconds / (self.earth_year_in_sec * 11.862615), 2)
+        self.age = round(
+            self.seconds / (self.earth_year_in_sec * 11.862615), 2
+        )
         return self.age
 
     def on_saturn(self):
-        self.age = round(self.seconds / (self.earth_year_in_sec * 29.447498), 2)
+        self.age = round(
+            self.seconds / (self.earth_year_in_sec * 29.447498), 2
+        )
         return self.age
 
     def on_uranus(self):
-        self.age = round(self.seconds / (self.earth_year_in_sec * 84.016846), 2)
+        self.age = round(
+            self.seconds / (self.earth_year_in_sec * 84.016846), 2
+        )
         return self.age
 
     def on_neptune(self):
-        self.age = round(self.seconds / (self.earth_year_in_sec * 164.79132), 2)
+        self.age = round(
+            self.seconds / (self.earth_year_in_sec * 164.79132), 2
+        )
         return self.age
 
 

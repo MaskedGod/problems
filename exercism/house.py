@@ -18,4 +18,6 @@ def recite(start_verse, end_verse):
 
 
 print(recite(1, 1))  # ['This is the house that Jack built.']
-print(recite(2, 2))  # ['This is the malt that lay in the house that Jack built.']
+print(
+    recite(2, 2)
+)  # ['This is the malt that lay in the house that Jack built.']

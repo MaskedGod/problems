@@ -10,7 +10,9 @@ def log(fn):
         exec_time = round(end_time - start_time, 2)
 
         arg_names = fn.__code__.co_varnames[: fn.__code__.co_argcount]
-        arg_values = [f"{name}={value}" for name, value in zip(arg_names, args)]
+        arg_values = [
+            f"{name}={value}" for name, value in zip(arg_names, args)
+        ]
 
         kwarg_values = [f"{key}={value}" for key, value in kwargs.items()]
         print(arg_names)

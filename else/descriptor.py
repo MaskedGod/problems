@@ -28,7 +28,9 @@ class NameControl:
 
     def __set__(self, obj, value):
         if hasattr(obj, self.private_name):
-            raise ValueError(f"{self.public_name.capitalize()} can not be changed.")
+            raise ValueError(
+                f"{self.public_name.capitalize()} can not be changed."
+            )
         setattr(obj, self.private_name, value)
 
 

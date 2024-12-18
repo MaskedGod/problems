@@ -32,9 +32,7 @@ def split(data: str, sep=None, maxsplit=-1):
                     result.append(
                         data[start_index:current_index]
                     )  # Add the word (from start to current index)
-                start_index = (
-                    current_index  # Update the starting index for the next word
-                )
+                start_index = current_index  # Update the starting index for the next word
                 looking_for_space = (
                     not looking_for_space
                 )  # Switch between looking for space or non-space

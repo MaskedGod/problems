@@ -4,7 +4,9 @@ DataType = Iterable[Dict[str, Any]]
 ModifierFunc = Callable[[DataType], DataType]
 
 
-def query(data: DataType, selector: ModifierFunc, *filters: ModifierFunc) -> DataType:
+def query(
+    data: DataType, selector: ModifierFunc, *filters: ModifierFunc
+) -> DataType:
     """
     Query data with column selection and filters
 

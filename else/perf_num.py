@@ -5,7 +5,9 @@ def classify(number):
     :return: str the classification of the input integer
     """
     if number < 1:
-        raise ValueError("Classification is only possible for positive integers.")
+        raise ValueError(
+            "Classification is only possible for positive integers."
+        )
     aliquot_sum = sum([num for num in range(1, number) if number % num == 0])
     categories = {}
     categories["perfect"] = number == aliquot_sum

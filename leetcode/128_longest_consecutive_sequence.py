@@ -6,10 +6,10 @@ def longestConsecutive(nums: list[int]) -> int:
     """
     if not nums:
         return 0
-    
+
     num_set = set(nums)  # Step 1: Store all numbers in a hash set
     longest_sequence = 0
-    
+
     # Step 2: Iterate over each number in the array
     for num in num_set:
         # Step 3: Only start counting sequence if num is the start (num-1 isn't in the set)
@@ -21,7 +21,7 @@ def longestConsecutive(nums: list[int]) -> int:
             while current_num + 1 in num_set:
                 current_num += 1
                 current_streak += 1
-            
+
             # Step 5: Track the longest sequence found
             longest_sequence = max(longest_sequence, current_streak)
 

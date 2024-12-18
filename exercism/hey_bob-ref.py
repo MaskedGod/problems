@@ -53,7 +53,10 @@ def response(hey_bob: str) -> str:
     is_yelling = hey_bob.isupper()
 
     responses = {
-        (True, True): "Calm down, I know what I'm doing!",  # Question + Yelling
+        (
+            True,
+            True,
+        ): "Calm down, I know what I'm doing!",  # Question + Yelling
         (True, False): "Sure.",  # Question only
         (False, True): "Whoa, chill out!",  # Yelling only
     }

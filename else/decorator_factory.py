@@ -23,7 +23,8 @@ def decorator_apply(lambda_func) -> Callable[..., Callable[..., int]]:
 @decorator_apply(lambda user_id: user_id + 1)
 def return_user_id(num: int) -> int:
     """
-    Returns the given integer, modified by the lambda function in the decorator"""
+    Returns the given integer, modified by the lambda function in the decorator
+    """
     return num
 
 

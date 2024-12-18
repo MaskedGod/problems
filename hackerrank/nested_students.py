@@ -1,5 +1,10 @@
-students = [['Harry', 37.21], ['Berry', 37.21], ['Tina', 37.2], 
-            ['Akriti', 41], ['Harsh', 39]]
+students = [
+    ["Harry", 37.21],
+    ["Berry", 37.21],
+    ["Tina", 37.2],
+    ["Akriti", 41],
+    ["Harsh", 39],
+]
 
 scores = []
 
@@ -13,4 +18,3 @@ print(lowest2)
 for student in sorted(students):
     if student[1] == lowest2:
         print(student[0])
-

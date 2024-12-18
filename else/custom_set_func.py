@@ -21,7 +21,11 @@ def intersect(*args) -> set:
     return set(result)
 
 
-print(union(("S", "A", "M"), ["S", "P", "A", "C"]))  # {'S', 'P', 'A', 'M', 'C'}
+print(
+    union(("S", "A", "M"), ["S", "P", "A", "C"])
+)  # {'S', 'P', 'A', 'M', 'C'}
 
-print(intersect(("S", "A", "C"), ("P", "C", "S"), ("G", "H", "S", "C")))  # {'S', 'C'}
+print(
+    intersect(("S", "A", "C"), ("P", "C", "S"), ("G", "H", "S", "C"))
+)  # {'S', 'C'}
 print(intersect(("S", "A", "C"), ("P", "C"), ("G", "H")))

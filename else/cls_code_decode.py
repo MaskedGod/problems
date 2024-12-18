@@ -29,7 +29,9 @@ class Cipher:
     @property
     def cipher(self):
         key_list = list(self.keyword.upper())
-        redacted_alphabet = [char for char in self._alph if char not in key_list]
+        redacted_alphabet = [
+            char for char in self._alph if char not in key_list
+        ]
         return key_list + redacted_alphabet
 
     def encode(self, data):
@@ -38,7 +40,9 @@ class Cipher:
             if char.upper() in self._alph:
                 indx = self._alph.index(char.upper())
                 encoded += (
-                    self._cipher[indx].lower() if char.islower() else self._cipher[indx]
+                    self._cipher[indx].lower()
+                    if char.islower()
+                    else self._cipher[indx]
                 )
             else:
                 encoded += char
@@ -51,7 +55,9 @@ class Cipher:
             if char.upper() in self._alph:
                 indx = self.cipher.index(char.upper())
                 encoded += (
-                    self._alph[indx].lower() if char.islower() else self._alph[indx]
+                    self._alph[indx].lower()
+                    if char.islower()
+                    else self._alph[indx]
                 )
             else:
                 encoded += char

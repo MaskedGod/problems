@@ -15,4 +15,6 @@ def flatten(iterable):
 print(flatten([1, [2, 3, None, 4], [None], 5]))  # [1,2,3,4,5]
 print(flatten([0, 1, 2]))  # [0, 1, 2]
 print(flatten([1, 2, None]))  # [1, 2]
-print(flatten([1, [2, [[3]], [4, [[5]]], 6, 7], 8]))  # [1, 2, 3, 4, 5, 6, 7, 8]
+print(
+    flatten([1, [2, [[3]], [4, [[5]]], 6, 7], 8])
+)  # [1, 2, 3, 4, 5, 6, 7, 8]

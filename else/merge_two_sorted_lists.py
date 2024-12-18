@@ -14,7 +14,9 @@ class ListNode:
 
 
 # t O(n)  s O(1)
-def mergeTwoLists(list1: ListNode | None, list2: ListNode | None) -> ListNode | None:
+def mergeTwoLists(
+    list1: ListNode | None, list2: ListNode | None
+) -> ListNode | None:
     dummy = ListNode()  # Create a dummy node to simplify the merge process
     current = dummy  # Initialize 'current' to point to the dummy node
 

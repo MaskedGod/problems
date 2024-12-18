@@ -158,7 +158,9 @@ def main(argv: Optional[Sequence] = None):
         "--json", help="Print result as JSON in stdout", action="store_true"
     )
     parser.add_argument(
-        "--limit", help="Limit news topics if this parameter provided", type=int
+        "--limit",
+        help="Limit news topics if this parameter provided",
+        type=int,
     )
 
     args = parser.parse_args(argv)

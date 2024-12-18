@@ -10,20 +10,21 @@
 #         # Base case: if the index is less than 0, it means we need to add a new digit
 #         if index < 0:
 #             return [1]  # Return [1] as we have a carry over
-        
+
 #         # Increment the current digit
 #         digits[index] += 1
-        
+
 #         # Check if the incremented digit is less than 10
 #         if digits[index] < 10:
 #             return digits  # No carry, return the modified array
-        
+
 #         # If the digit is 10, set it to 0 and continue carrying over
 #         digits[index] = 0
 #         return addOne(index - 1)  # Recursively call for the next digit to the left
 
 #     # Start the recursive process from the last digit
 #     return addOne(len(digits) - 1)
+
 
 def plusOne(digits: list[int]) -> list[int]:
     for i in range(len(digits) - 1, -1, -1):

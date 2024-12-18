@@ -19,8 +19,8 @@ class TestSquare(unittest.TestCase):
 
     def test_str(self):
         with self.assertRaises(TypeError):
-            square('cat')
+            square("cat")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()
